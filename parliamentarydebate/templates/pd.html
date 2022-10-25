@@ -11,28 +11,162 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    #nav-bar{
+    height: 4vw;
+    background-color: black;
+    width: 99vw;
+}
+#alcher-logo{
+    margin-left: 11.1vw;
+    margin-top: 1.2vw;
+    width: 15vw;
+    height: 15vw;
+}
+#pd{
+    position: relative;
+    top: -0.3vw;
+    font-family: 'lato';
+    font-weight: 7000;
+    font-size: xx-large;
+}
+.nav-objects{
+    position: relative;
+    top: -5px;
+}
+.nav-objects a{
+    color:  #cccccc;
+    text-decoration: none;
+}
+#nav-bar div{
+    display: inline-block;
+}
+#about-us{
+    margin-left: 22vw;
+}
+.left-margin{
+    margin-left: 4vw;
+}
+#register{
+    color: black;
+    text-align: center;
+    padding-top: 6px;
+    /* padding-left: 1%; */
+    padding-right: 0.4%;
+    padding-bottom: 10px;
+    width: 8vw;
+    height: 16px;
+    background: #FFD601;
+    border-radius: 33px;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-top: 6px;
+    font-family: 'lato';
+    margin-left: 2%;
+}
+#reg{
+    color: black;
+}
+#image{
+    background-image: url({% static "main/images/Frame4.svg" %});
+    background-size: cover;
+    width: 99vw;
+    height: 40vw;
+    overflow: hidden;
+}
+#inner-image1{
+    position: relative;
+    top: 20%;
+    left: 11%;
+}
+.inner-text{
+    position: relative;
+    top: 23%;
+    left: 11.1%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 3.66vw;
+}
+#inner-text2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    position: relative;
+    top: 10.6vw;
+    left: 11vw;
+    font-size: 1.11vw;
+}
+#register-button{
+    color: black;
+    text-align: center;
+    padding-left: 0.5vw;
+    padding-top: 10px;
+    padding-right: 0.5%;
+    padding-bottom: 5px;
+    width: 9vw;
+    height: 2.35vw;
+    background: #FFD601;
+    border-radius: 33px;
+    font-size: 1.5vw;
+    font-weight: 550;
+    margin-top: 6px;
+    font-family: 'lato';
+    margin-left: 2%;
+    position: relative;
+    top: 12.65vw;
+    left: 9vw;
+}
+</style>
 <body>
 
-    <nav style="background-image:url({% static "main/images//Untitled-2@2x.png" %});">
+
+    <div class="topnav"> 
+            
+        <img src={% static "main/images/alcher_logo" %} id="alcher-logo">
+        <img src={% static "main/images/PD.png" %} id="pd">
+
+        <!-- Navigation links (hidden by default) -->
+        
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <ul class="navbar">
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#about">About Us </a></li>
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#highlights">Highlights </a></li>
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#prizes">Prizes </a></li>
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#adjudicators">Adjudicators</a></li>
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#team">Team </a></li>
+        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#contact">Contact Us</a></li>
+        <li class="nav-item" id="toregister"><a class="nav-link nav-objects left-margin" href="#registration" >Register </a></li>
+    </ul>
+
+    <!-- <nav style="background-image:url({% static "main/images//Untitled-2@2x.png" %});">
         <div id="topimages"  class="container">
             <img src={% static "main/images/IITG_White.png" %} id="IITG_White">
             <img src={% static "main/images/Full_White.png" %} id="Full_White">
         </div>
-        <div class="topnav">
+        <div class="topnav"> -->
             
             <!-- Navigation links (hidden by default) -->
-            <div id="myLinks">
+            <!-- <div id="myLinks">
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a>
-            </div>
+            </div> -->
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
-            </a>
-          </div>
+            </a> -->
+          <!-- </div> -->
        
-        <section class="organise" id="headingpara">
+        <!-- <section class="organise" id="headingpara">
              <h1 class="big-heading" style="color: white; font-size: 5.5vw;font-weight:bold;">PARLIAMENTARY<br>
             DEBATE</h1>
               <p class="para" >Alcheringa, IIT Guwahati in it’s 25th incarnation<br>
@@ -49,10 +183,104 @@
             <li class="nav-item"><a class="nav-link" href="#adjudicators">Adjudicators</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
         </ul>
+    </nav> -->
     
 
-    </nav>
-    <section id="about"  class="organise" style="height:100%;padding-top:13vw;">
+
+
+
+
+
+    <!-- <div id="nav-bar">
+        <img src={% static "main/images/alcher_logo.png" %} id="alcher-logo">
+        <img src={% static "main/images/PD.png" %} id="pd">
+        <div id="about-us" class="nav-objects">
+            <a href="#about"> About US </a>
+        </div>
+        <div id="highlights" class="nav-objects left-margin nav-item">
+            <a href="#highlights">Highlights</a>
+        </div>
+        <div id="prizes" class="nav-objects left-margin">
+            <a href="#prizes">Prizes</a>
+        </div>
+        <div id="adjudicators" class="nav-objects left-margin">
+            <a href="#adjudicators">Adjudicators</a> 
+        </div>
+        <div id="team" class="nav-objects left-margin">
+            <a href="#team">Team</a> 
+        </div>
+        <div id="contact-us" class="nav-objects left-margin">
+            <a href="#contact">Contact Us</a> 
+        </div>
+        <div id="register" class="nav-objects left-margin">
+            <span class="text">
+                <a href="#registration" id="reg">REGISTER</a>
+            </span>
+        </div>
+    </div>
+    <div id="image" style="background-image: url({% static "main/images/Frame4.svg" %});">
+        <div id="inner-image1">
+            <img src="{% static "main/images/Alcher.png" %}" alt="" style="width: 13.99%; height: auto;">
+        </div>
+        <div class="inner-text" style="color: white ;">
+            PARLIAMENTARY
+        </div>
+        <div class="inner-text" style="color: white ;">
+            DEBATE
+        </div>
+        <div id="inner-text2" style="color: white ;">
+            Alcheringa, IIT Guwahati in its 26th incarnation presents to <br>
+            you another edition of its very own debate tournament. The <br>
+            IIT Guwahati Parliamentary Debate. 
+        </div>
+        <div id="register-button">
+            <span class="text">
+                <a href="#" id="reg" style="text-decoration: none ;">REGISTER</a>
+            </span>
+        </div>
+    </div> -->
+
+    <div id="image" style="background-image: url({% static "main/images/Frame4.svg" %});">
+        <div id="inner-image1">
+            <img src="{% static "main/images/Alcher.png" %}" alt="" style="width: 13.99%; height: auto;">
+        </div>
+        <div class="inner-text" style="color: white ;">
+            PARLIAMENTARY
+        </div>
+        <div class="inner-text" style="color: white ;">
+            DEBATE
+        </div>
+        <div id="inner-text2" style="color: white ;">
+            Alcheringa, IIT Guwahati in its 26th incarnation presents to <br>
+            you another edition of its very own debate tournament. The <br>
+            IIT Guwahati Parliamentary Debate. 
+        </div>
+        <div id="register-button">
+            <span class="text">
+                <a href="#" id="reg" style="text-decoration: none ;">REGISTER</a>
+            </span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="about"  class="organise" style="height:100%;padding-top:13vw;">
         
         <span>About Us</span>
        <br><br>
@@ -444,4 +672,4 @@ function myFunction() {
 
 
 </body>
-</html>
+</html> -->
