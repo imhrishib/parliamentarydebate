@@ -15,127 +15,6 @@ body{
 
 
 
-
-
-#nav-bar{
-  height: 4vw;
-  background-color: black;
-  width: 99vw;
-}
-#alcher-logo{
-  margin-left: 11.1vw;
-  margin-top: 1.2vw;
-  width: 1.5vw;
-  /* height: 1.5vw; */
-}
-#pd{
-  position: relative;
-  top: 0.5vw;
-  font-family: 'lato';
-  font-weight: 7000;
-  font-size: xx-large;
-}
-/* .nav-objects{
-  position: relative;
-  top: 0.6vw;
-} */
-.nav-objects a{
-  color:  #cccccc;
-  text-decoration: none;
-}
-#nav-bar div{
-  display: inline-block;
-}
-#about-us{
-  margin-left: 22vw;
-}
-.left-margin{
-  margin-left: 4vw;
-}
-#register{
-  color: black;
-  text-align: center;
-  padding-top: 6px;
-  /* padding-left: 1%; */
-  padding-right: 0.4%;
-  padding-bottom: 10px;
-  width: 8vw;
-  height: 16px;
-  background: #FFD601;
-  border-radius: 33px;
-  font-size: 1vw;
-  font-weight: 600;
-  margin-top: 6px;
-  font-family: 'lato';
-  margin-left: 2%;
-}
-#reg{
-  color: black;
-}
-#image{
-  background-size: cover;
-  width: 99vw;
-  height: 40vw;
-  overflow: hidden;
-}
-#inner-image1{
-  position: relative;
-  top: 20%;
-  left: 11%;
-}
-.inner-text{
-  position: relative;
-  top: 23%;
-  left: 11.1%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  font-size: 3.66vw;
-}
-#inner-text2{
-  font-family: 'Lato', sans-serif;
-  font-weight: 200;
-  position: relative;
-  top: 10.6vw;
-  left: 11vw;
-  font-size: 1.11vw;
-}
-#register-button{
-  color: black;
-  text-align: center;
-  padding-left: 0.5vw;
-  padding-top: 10px;
-  padding-right: 0.5%;
-  padding-bottom: 5px;
-  width: 9vw;
-  height: 2.35vw;
-  background: #FFD601;
-  border-radius: 33px;
-  font-size: 1.5vw;
-  font-weight: 550;
-  margin-top: 6px;
-  font-family: 'lato';
-  margin-left: 2%;
-  position: relative;
-  top: 12.65vw;
-  left: 9vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 nav{
     
         background-position: center;
@@ -155,28 +34,26 @@ nav p{
         width:60%;
 
     }
-  #IITG_White{
-    float:left;
-    height:5vw;
-    
-
-  }
-  #Full_White{
-    float:right;
-    height:4vw;
+#IITG_White{
+  float:left;
+  height:5vw;
+}
+#Full_White{
+  float:right;
+  height:4vw;
 }
   
 /* Style the navigation menu */
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
   
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
-    display: none;
-  }
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
   
   /* Style navigation menu links */
   .topnav a {
@@ -258,8 +135,8 @@ li{
     list-style: none;
 }
 #toregister{
-    background-color:#0DFF56;
-    border-radius:100px;
+    background-color: yellow;
+    border-radius:33px;
     padding-right:0.8vw;
     padding-left:0.8vw;
 }

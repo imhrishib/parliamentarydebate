@@ -12,215 +12,302 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-    #nav-bar{
-    height: 4vw;
-    background-color: black;
-    width: 99vw;
-}
-#alcher-logo{
-    margin-left: 11.1vw;
-    margin-top: 1.2vw;
-    width: 15vw;
-    height: 15vw;
-}
-#pd{
-    position: relative;
-    top: -0.3vw;
-    font-family: 'lato';
-    font-weight: 7000;
-    font-size: xx-large;
-}
-.nav-objects{
-    position: relative;
-    top: -5px;
-}
-.nav-objects a{
-    color:  #cccccc;
-    text-decoration: none;
-}
-#nav-bar div{
-    display: inline-block;
-}
-#about-us{
-    margin-left: 22vw;
-}
-.left-margin{
-    margin-left: 4vw;
-}
-#register{
-    color: black;
-    text-align: center;
-    padding-top: 6px;
-    /* padding-left: 1%; */
-    padding-right: 0.4%;
-    padding-bottom: 10px;
-    width: 8vw;
-    height: 16px;
-    background: #FFD601;
-    border-radius: 33px;
-    font-size: 1vw;
-    font-weight: 600;
-    margin-top: 6px;
-    font-family: 'lato';
-    margin-left: 2%;
-}
-#reg{
-    color: black;
-}
-#image{
-    background-image: url({% static "main/images/Frame4.svg" %});
-    background-size: cover;
-    width: 99vw;
-    height: 40vw;
-    overflow: hidden;
-}
-#inner-image1{
-    position: relative;
-    top: 20%;
-    left: 11%;
-}
-.inner-text{
-    position: relative;
-    top: 23%;
-    left: 11.1%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    font-size: 3.66vw;
-}
-#inner-text2{
-    font-family: 'Lato', sans-serif;
-    font-weight: 200;
-    position: relative;
-    top: 10.6vw;
-    left: 11vw;
-    font-size: 1.11vw;
-}
-#register-button{
-    color: black;
-    text-align: center;
-    padding-left: 0.5vw;
-    padding-top: 10px;
-    padding-right: 0.5%;
-    padding-bottom: 5px;
-    width: 9vw;
-    height: 2.35vw;
-    background: #FFD601;
-    border-radius: 33px;
-    font-size: 1.5vw;
-    font-weight: 550;
-    margin-top: 6px;
-    font-family: 'lato';
-    margin-left: 2%;
-    position: relative;
-    top: 12.65vw;
-    left: 9vw;
-}
+    @media only screen and (max-width: 480px){
+
+        /* The navigation bar options of desktop view must be hidden when screen is less than 480px */
+        .nav-item{
+            display: none;
+        }
+        #nav-bar{
+            overflow: hidden;
+            height: 3vw;
+            background-color: black;
+            width: 100vw;
+        }
+        #image{
+            overflow: hidden;
+            background-size: cover;
+            width: 100vw;
+            height: 100vw;
+            background-image: url({% static "main/images/Frame4.svg" %});
+        }
+        #inner-image1{
+            position: relative;
+            top: 18.5vw;
+            left: 11%;
+            width: 30.6vw;
+        }   
+        .inner-text{
+            position: relative;
+            top: 25%;
+            left: 11.1%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 8vw;
+        }
+        #inner-text2{
+            font-family: 'Lato', sans-serif;
+            font-weight: 200;
+            position: relative;
+            top: 30vw;
+            left: 11vw;
+            font-size: 2.8vw;
+        }
+        #register-button2{
+            width: 20.5vw;
+            height: 8vw;
+            background: #FFD601;
+            border-radius: 33px;
+            font-size: 3vw;
+            font-weight: 550;
+            margin-top: 6px;
+            font-family: 'lato', sans-serif;
+            margin-left: 2%;
+            position: relative;
+            top: 40vw;
+            left: 8vw;
+        }
+        #reg2{
+            color: black;
+            position: relative;
+            top: 2.5vw;
+            left: 2.5vw;
+        }
+        #alcher-logo{
+            position: relative;
+            top: 1vw;
+            left: 3vw;
+            width: 4vw;
+        }
+        #pd{
+            position: relative;
+            top: 1.1vw;
+            left: -14vw;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 5vw
+        }
+        #register-button{
+            width: 18.5vw;
+            height: 7vw;
+            background: #FFD601;
+            border-radius: 33px;
+            font-size: 2.5vw;
+            font-weight: 550;
+            font-family: 'lato', sans-serif;
+            position: relative;
+            top: 1vw;
+            left: 10vw;
+        }
+        #reg{
+            color: black;
+            position: relative;
+            top: 2.5vw;
+            left: 2.8vw;
+        }
+        #bars{
+            display: inline-block;
+            width:10vw;
+            height: 10vw;
+            position: relative;
+            left: -5vw;
+            top: -1.2vw;
+            overflow: hidden;
+        }
+        
+        /* The new navigation bar must be hidden unless the user clicks the menu button (3 bars) */
+        #toggled-nav-bar{
+            display: none;
+            height: 100vh;
+            width: 96.9vw;
+            text-align: right;
+            font-weight: bolder;
+            font-size: 8vw;
+        }
+        #toggled-nav-bar a{
+            text-decoration: none;
+            color: white;
+        }
+        .toggled-item{
+            margin-bottom: 8vh;
+        }
+    }
+
+    /* For screen sizes greater than 480px */
+
+    @media only screen and (min-width: 481px){
+        #nav-bar{
+            overflow: hidden;
+            height: 4vw;
+            background-color: black;
+            width: 100vw;
+        }
+        #alcher-logo{
+            margin-left: 11.1vw;
+            margin-top: 1.2vw;
+            width: 1.5vw;
+        }
+        #pd{
+            position: relative;
+            top: 0.6vw;
+            left: -1.5vw;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 1.8vw
+        }
+        .nav-objects{
+            position: relative;
+            top: 0.5vw;
+            font-size: 1vw;
+        }
+        .nav-objects a{
+            color:  #cccccc;
+            text-decoration: none;
+        }
+        #nav-bar div{
+            display: inline-block;
+        }
+        #about-us{
+            margin-left: 10vw;
+        }
+        .left-margin{
+            margin-left: 1vw;
+        }
+
+        /* Register button in the top navigation bar */
+        #register{
+            color: black;
+            text-align: center;
+            padding-top: 6px;
+            padding-right: 0.4%;
+            padding-bottom: 10px;
+            width: 8vw;
+            height: 16px;
+            background: #FFD601;
+            border-radius: 33px;
+            font-size: 1vw;
+            font-weight: 600;
+            margin-top: 6px;
+            font-family: 'lato' sans-serif;
+            margin-left: 2%;
+        }
+        #reg{
+            color: black;
+            position: relative;
+            top: 0.6vw;
+            left: 1.2vw;
+        }
+        #image{
+            overflow: hidden;
+            background-size: cover;
+            width: 98.9vw;
+            height: 40vw;
+            background-image: url({% static "main/images/Frame4.svg" %});
+        }
+        #inner-image1{
+            position: relative;
+            top: 20%;
+            left: 11%;
+            width: 13.99%; 
+            height: auto;
+        }
+        .inner-text{
+            position: relative;
+            top: 25%;
+            left: 11.1%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 3.66vw;
+        }
+        #inner-text2{
+            font-family: 'Lato', sans-serif;
+            font-weight: 200;
+            position: relative;
+            top: 12vw;
+            left: 11vw;
+            font-size: 1.11vw;
+        }
+        #register-button{
+            width: 8vw;
+            height: 2vw;
+            background: #FFD601;
+            border-radius: 33px;
+            font-size: 1vw;
+            font-weight: 550;
+            margin-top: 6px;
+            font-family: 'lato', sans-serif;
+            margin-left: 2%;
+            position: relative;
+            top: 0.3vw;
+            left: -1vw;
+        }
+
+        /* Register button on the image */
+        #register-button2{
+            width: 9vw;
+            height: 2.8vw;
+            background: #FFD601;
+            border-radius: 33px;
+            font-size: 1.2vw;
+            font-weight: bold;
+            margin-top: 6px;
+            font-family: 'lato', sans-serif;
+            margin-left: 2%;
+            position: relative;
+            top: 15vw;
+            left: 9vw;
+        }
+        #reg2{
+            color: black;
+            position: relative;
+            top: 0.8vw;
+            left: 1.3vw;
+        }
+
+        /* The bars and toggle nav bar must be hidden in desktop view */
+        #bars{
+            display: none;
+        }
+        #toggled-nav-bar{
+            display: none;
+        }
+    }
 </style>
 <body>
 
-
-    <div class="topnav"> 
-            
-        <img src={% static "main/images/alcher_logo" %} id="alcher-logo">
-        <img src={% static "main/images/PD.png" %} id="pd">
-
-        <!-- Navigation links (hidden by default) -->
-        
-        <div id="myLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
+    <!-- Navigation bar in the desktop view -->
     <ul class="navbar">
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#about">About Us </a></li>
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#highlights">Highlights </a></li>
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#prizes">Prizes </a></li>
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#adjudicators">Adjudicators</a></li>
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#team">Team </a></li>
-        <li class="nav-item"><a class="nav-link nav-objects left-margin" href="#contact">Contact Us</a></li>
-        <li class="nav-item" id="toregister"><a class="nav-link nav-objects left-margin" href="#registration" >Register </a></li>
+        <img src="{% static "main/images/alcher_logo.png" %}" alt="" id="alcher-logo">
+        <text id="pd">PD</text>
+        <li class="nav-item"><a class="nav-link nav-objects" id="about-us" href="#about">About Us </a></li>
+        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#highlights">Highlights </a></li>
+        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#prizes">Prizes </a></li>
+        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#adjudicators">Adjudicators</a></li>
+        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#team">Team </a></li>
+        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#contact">Contact Us</a></li>
+        <li id="register-button"><a id="reg" href="#registration" >REGISTER</a></li>
+        
+        <!-- The toggle icon for mobile view -->
+        <span id="bars">
+            <img src="{% static "main/images/bars.png" %}" alt="" id="toggle-bars">
+        </span>
+
     </ul>
 
-    <!-- <nav style="background-image:url({% static "main/images//Untitled-2@2x.png" %});">
-        <div id="topimages"  class="container">
-            <img src={% static "main/images/IITG_White.png" %} id="IITG_White">
-            <img src={% static "main/images/Full_White.png" %} id="Full_White">
-        </div>
-        <div class="topnav"> -->
-            
-            <!-- Navigation links (hidden by default) -->
-            <!-- <div id="myLinks">
-              <a href="#news">News</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
-            </div> -->
-            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a> -->
-          <!-- </div> -->
-       
-        <!-- <section class="organise" id="headingpara">
-             <h1 class="big-heading" style="color: white; font-size: 5.5vw;font-weight:bold;">PARLIAMENTARY<br>
-            DEBATE</h1>
-              <p class="para" >Alcheringa, IIT Guwahati in it’s 25th incarnation<br>
-                presents to you another edition of it’s very own<br>
-                debate tournament,The IIT Guwahati Parliamentary Debate.</p>
-
-        </section>
-        <ul class="navbar">
-            <li class="nav-item"><a class="nav-link" href="#about">About Us </a></li>
-            <li class="nav-item"><a class="nav-link" href="#highlights">Highlights </a></li>
-            <li class="nav-item"><a class="nav-link" href="#prizes">Prizes </a></li>
-            <li class="nav-item" id="toregister"><a class="nav-link" href="#registration" >Register </a></li>
-            <li class="nav-item"><a class="nav-link" href="#team">Team </a></li>
-            <li class="nav-item"><a class="nav-link" href="#adjudicators">Adjudicators</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-        </ul>
-    </nav> -->
-    
-
-
-
-
-
-
-    <!-- <div id="nav-bar">
-        <img src={% static "main/images/alcher_logo.png" %} id="alcher-logo">
-        <img src={% static "main/images/PD.png" %} id="pd">
-        <div id="about-us" class="nav-objects">
-            <a href="#about"> About US </a>
-        </div>
-        <div id="highlights" class="nav-objects left-margin nav-item">
-            <a href="#highlights">Highlights</a>
-        </div>
-        <div id="prizes" class="nav-objects left-margin">
-            <a href="#prizes">Prizes</a>
-        </div>
-        <div id="adjudicators" class="nav-objects left-margin">
-            <a href="#adjudicators">Adjudicators</a> 
-        </div>
-        <div id="team" class="nav-objects left-margin">
-            <a href="#team">Team</a> 
-        </div>
-        <div id="contact-us" class="nav-objects left-margin">
-            <a href="#contact">Contact Us</a> 
-        </div>
-        <div id="register" class="nav-objects left-margin">
-            <span class="text">
-                <a href="#registration" id="reg">REGISTER</a>
-            </span>
-        </div>
+    <!-- New Toggled navigation menu in the mobile view -->
+    <div id="toggled-nav-bar" style="text-align: right ; color: white;">
+        <div id="toggled-about" class="toggled-item"><a href="#about"> About</a></div>
+        <div id="toggled-highlights" class="toggled-item"><a href="#highlights"> Highlights</a> </div>
+        <div id="toggled-prizes" class="toggled-item"><a href="#prizes"> Prizes</a></div>
+        <div id="toggled-team" class="toggled-item"><a href="#team"> Team</a></div>
+        <div id="toggled-contact" class="toggled-item"><a href="contact"> Contact Us</a></div>
     </div>
-    <div id="image" style="background-image: url({% static "main/images/Frame4.svg" %});">
+
+    <!-- Nav bar Finished -->
+
+    <div id="image">
         <div id="inner-image1">
-            <img src="{% static "main/images/Alcher.png" %}" alt="" style="width: 13.99%; height: auto;">
+            <img src="{% static "main/images/Alcher.png" %}">
         </div>
         <div class="inner-text" style="color: white ;">
             PARLIAMENTARY
@@ -233,54 +320,15 @@
             you another edition of its very own debate tournament. The <br>
             IIT Guwahati Parliamentary Debate. 
         </div>
-        <div id="register-button">
+        <div id="register-button2">
             <span class="text">
-                <a href="#" id="reg" style="text-decoration: none ;">REGISTER</a>
-            </span>
-        </div>
-    </div> -->
-
-    <div id="image" style="background-image: url({% static "main/images/Frame4.svg" %});">
-        <div id="inner-image1">
-            <img src="{% static "main/images/Alcher.png" %}" alt="" style="width: 13.99%; height: auto;">
-        </div>
-        <div class="inner-text" style="color: white ;">
-            PARLIAMENTARY
-        </div>
-        <div class="inner-text" style="color: white ;">
-            DEBATE
-        </div>
-        <div id="inner-text2" style="color: white ;">
-            Alcheringa, IIT Guwahati in its 26th incarnation presents to <br>
-            you another edition of its very own debate tournament. The <br>
-            IIT Guwahati Parliamentary Debate. 
-        </div>
-        <div id="register-button">
-            <span class="text">
-                <a href="#" id="reg" style="text-decoration: none ;">REGISTER</a>
+                <a href="#registration" id="reg2" style="text-decoration: none ;">REGISTER</a>
             </span>
         </div>
     </div>
+    <!-- Introductory Image done -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <section id="about"  class="organise" style="height:100%;padding-top:13vw;">
+    <section id="about"  class="organise" style="height:100%;padding-top:13vw;">
         
         <span>About Us</span>
        <br><br>
@@ -491,13 +539,10 @@
                 </table>
                 <input type="submit" value="Proceed to Pay">
             </form>
-                  
         </div>
     </div>
-      
-    </div>
-  
-  </div>
+</div>
+</div>
     
   <section id="prizes"  class="organise">
     
@@ -659,17 +704,34 @@ $("#modal-list2").click(function(){
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
+// function myFunction() {
+//   var x = document.getElementById("myLinks");
+//   if (x.style.display === "block") {
+//     x.style.display = "none";
+//   } else {
+//     x.style.display = "block";
+//   }
+// }
+</script>
+<script>
+    var x = document.getElementById("toggle-bars");
+    
+    var element1 = document.getElementById("image"); 
+    var element2 = document.getElementById("toggled-nav-bar");
+    x.addEventListener("click",change);
+    function change(){
+        var image = document.getElementById("toggle-bars");
+        if(image.getAttribute("src")=="{% static "main/images/cross.png" %}"){
+            image.setAttribute("src","{% static "main/images/bars.png" %}");
+            element1.style.display = "block";
+            element2.style.display = "none";
+        }else{
+            image.setAttribute("src","{% static "main/images/cross.png" %}"); 
+            element1.style.display = "none";
+            element2.style.display = "block";
+        }
+    }
 </script>
 
-
 </body>
-</html> -->
+</html>
