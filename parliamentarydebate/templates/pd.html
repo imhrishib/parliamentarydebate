@@ -194,7 +194,7 @@
                 <span class="close material-symbols-outlined" id="closeb">close</span><span id="registertitle">Register As</span></div>
 
             <ul>
-                <li id="modallist1" class="modal-list1-active"><a id="modal-list1">Institutional Team/Contingent</a></li>
+                <li id="modallist1" class="modal-list2-active"><a id="modal-list1">Institutional Team/Contingent</a></li>
                 <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2">Cross/Open</a></li>
                 <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3">Indepent Adjudicator</a></li>
 
@@ -209,9 +209,12 @@
                         <div class="input-field">
                             <p>Phone number <span style="color: red;">*</span></p>
                             <input type="number" name="number" placeholder="Contact Number" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
                             <p>Email ID <span style="color: red;">*</span></p>
                             <input type="email" name="EmailID" placeholder="Email ID" spellcheck="false" data-ms-editor="true" style="width: 100%;">
                         </div>
+
                     </div>
                     <div style="display: flex; justify-content:center;">
                         <input type="submit" value="REGISTER">
@@ -396,8 +399,8 @@
             $("#team-registration").show();
             $("#independent-adjudicator").hide();
             $("#cross-open").hide();
-            $('#modallist1').removeClass('modal-list1-inactive');
-            $('#modallist1').addClass('modal-list1-active');
+            $('#modallist1').removeClass('modal-list2-inactive');
+            $('#modallist1').addClass('modal-list2-active');
             $('#modallist2').removeClass('modal-list2-active');
             $('#modallist2').addClass('modal-list2-inactive');
             $('#modallist3').removeClass('modal-list2-active');
@@ -408,8 +411,8 @@
             $("#cross-open").show();
             $("#team-registration").hide();
             $("#independent-adjudicator").hide();
-            $('#modallist1').removeClass('modal-list1-active');
-            $('#modallist1').addClass('modal-list1-inactive');
+            $('#modallist1').removeClass('modal-list2-active');
+            $('#modallist1').addClass('modal-list2-inactive');
             $('#modallist2').removeClass('modal-list2-inactive');
             $('#modallist2').addClass('modal-list2-active');
             $('#modallist3').removeClass('modal-list2-active');
@@ -419,8 +422,8 @@
             $("#independent-adjudicator").show();
             $("#team-registration").hide();
             $("#cross-open").hide();
-            $('#modallist1').removeClass('modal-list1-active');
-            $('#modallist1').addClass('modal-list1-inactive');
+            $('#modallist1').removeClass('modal-list2-active');
+            $('#modallist1').addClass('modal-list2-inactive');
             $('#modallist2').removeClass('modal-list2-active');
             $('#modallist2').addClass('modal-list2-inactive');
             $('#modallist3').removeClass('modal-list2-inactive');
