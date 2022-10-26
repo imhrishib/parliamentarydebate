@@ -334,6 +334,7 @@ nav p {
     }
     .close:hover,
     .close:focus {
+        color: white;
         text-decoration: none;
         cursor: pointer;
         transform: rotate(180deg);
@@ -363,7 +364,7 @@ nav p {
     }
     .modal-list2-active {
         cursor: pointer;
-        padding: 1vw 4vw 1vw 4vw;
+        padding: 1vw 30px 1vw 30px;
         font-weight: bold;
         border-bottom: 0.3vw solid #FFD601;
         transition: padding 2s;
@@ -372,7 +373,7 @@ nav p {
     }
     .modal-list2-inactive {
         cursor: pointer;
-        padding: 1vw 2vw 1vw 2vw;
+        padding: 1vw 20px 1vw 20px;
         font-weight: bold;
         transition: padding 2s;
         transition-duration: 1s;
@@ -419,6 +420,7 @@ nav p {
     }
     /* Style the submit button */
     input[type=submit] {
+        font-weight: bold;
         border: 0px;
         display: flex;
         flex-direction: row;
@@ -439,6 +441,11 @@ nav p {
         font-weight: 500;
         font-size: 16px;
         color: #211200;
+        transition: background 0.2s ease-in-out;
+    }
+    input[type=submit]:hover {
+        background: #877000;
+        transition: background 0.2s ease-in-out;
     }
     /* Style the container */
     .container {
